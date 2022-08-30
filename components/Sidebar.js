@@ -13,7 +13,8 @@ import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { playlistIdState } from "../atoms/playlistAtom";
 import useSpotify from "../hooks/useSpotify";
-
+import logo from '../assets/logo.png';
+import Image from "next/image";
 
 function Sidebar() {
     const spotifyApi = useSpotify();
@@ -38,6 +39,13 @@ function Sidebar() {
         overflow-y-scroll scrollbar-hide h-screen
         sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex pb-36">
             <div className="space-y-4">
+
+                <Image
+                src={logo}
+                alt=""
+                width="135px"
+                height="40px"
+                />
 
                 <button className="flex items-center space-x-2 hover:text-white">
                     <HomeIcon className="h-5 w-5" />
